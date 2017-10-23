@@ -1,12 +1,16 @@
 #!/usr/bin/env python
 
-import gdax
+import argparse
+import json
 import os
 import logging
-import argparse
 import sys
 import time
+
+import gdax
+
 from pymongo import MongoClient
+
 
 parser = argparse.ArgumentParser()
 parser.add_argument("API_URL", default="https://api-public.sandbox.gdax.com",
@@ -91,39 +95,9 @@ def min_profit_buy(size):
 
 logging.info('USD Balance: {0}'.format(get_balance(accounts, 'USD')))
 logging.info('BTC Balance: {0}'.format(get_balance(accounts, 'BTC')))
-# logging.info('BTC Price: {0}'.format(client.get_product_ticker(product_id='BTC-USD')))
 
-# result = min_profit_buy('.01')
-# print result
-
-# def analyze():
-#     '''if price rises above a min profit margin, sell to reap the profit'''
-
-
-# def main():
-#     keep_running = True
-#     while keep_running:
-#         analyze()
-
-# ticker = client.get_product_ticker(product_id='BTC-USD')
-# ask = ticker['ask']
-
-# logging.info('ASK: {0}'.format(ask))
-
-# buy_id = buy_order('2920.00', '0.10')
-# logging.info('Buy order id: {0}'.format(buy_id))
-
-# sell_id = sell_order('7000', '.666')
-# logging.info('Sell order id: {0}'.format(buy_id))
-
-# status = get_order(buy_result['id'])
 
 if __name__ == "__main__":
-    import sys
-    import gdax
-    import time
-    import json
-
     mongo_client = MongoClient('mongodb://localhost:27017/')
     db = mongo_client.cryptocurrency_database
     BTC_collection = db.BTC_collection
