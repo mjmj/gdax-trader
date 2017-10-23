@@ -4,7 +4,6 @@ import gdax
 import os
 import logging
 import argparse
-import pprint
 import sys
 import time
 from pymongo import MongoClient
@@ -14,7 +13,6 @@ parser.add_argument("API_URL", default="https://api-public.sandbox.gdax.com",
                                help="Specify https://api.gdax.com OR \
                                  https://api-public.sandbox.gdax.com")
 args = parser.parse_args()
-pp = pprint.PrettyPrinter(depth=6)
 
 root = logging.getLogger()
 root.setLevel(logging.INFO)
@@ -119,7 +117,6 @@ logging.info('BTC Balance: {0}'.format(get_balance(accounts, 'BTC')))
 # logging.info('Sell order id: {0}'.format(buy_id))
 
 # status = get_order(buy_result['id'])
-# pp.pprint(status)
 
 if __name__ == "__main__":
     import sys
