@@ -46,3 +46,7 @@ gdax-trader will look for sandbox environment variables
 ## License
 
 This project is licensed under the terms of the MIT license. See [LICENSE](https://github.com/stavros0/bitcoin-price-prediction/blob/master/LICENSE) for more information.
+
+## Donations
+
+If you found this software useful I happily accept bitcoin donations here and deeply appreciate your kindness -> 3PKBG1i87ZynPJDtb7R4iXLN64X6vrfjTW
