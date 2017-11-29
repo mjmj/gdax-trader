@@ -1,6 +1,8 @@
 # gdax-trader
 Bitcoin trading bot that accepts a minimum profit to trade on, then waits for a price swing of that much to trade a proportal amount of the bankroll that is set. So if you provide $100 bankroll and bitcoin price swings 5%, the bot will trade $5 of your bankroll either buy or sell depending on what the swing was. Trade interval is configurable. This bot is a work in progress and I intended on adding trade signals to it for bitcoin price prediction such as a Bayesian regression.
 
+I'm still experimenting with using pymongo, it's not an actual requirement at this point.
+
 ## Requirements
 
 * [Python](https://www.python.org/) 2.7.x
