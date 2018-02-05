@@ -83,7 +83,8 @@ def sell(price, size, sell_type='limit', product_id='BTC-USD'):
                size=size,   # BTC
                product_id='BTC-USD')
     logging.info(order_result)
-    return order_result['id']
+    if 'id' in order_result:
+        return order_result['id']
 
 def min_profit_buy(size):
     ticker = client.get_product_ticker(product_id='BTC-USD')
