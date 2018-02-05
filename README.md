@@ -41,7 +41,7 @@ gdax-trader will look for prod environment variables
 ## Run in GDAX Sandbox
 gdax-trader will look for sandbox environment variables
 
-```ipython gdax-trader.py https://api.gdax.com```
+```ipython gdax-trader.py https://api-public.sandbox.gdax.com``
 
 ## License
 
